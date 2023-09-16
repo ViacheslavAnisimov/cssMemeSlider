@@ -72,7 +72,7 @@ body {
   width: calc(100% * 4);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.5em;
   text-wrap: nowrap;
   color: #fff;
 }
@@ -144,7 +144,7 @@ body {
   background: transparent;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .container {
     max-width: 80%;
     height: auto;
@@ -167,5 +167,11 @@ body {
   .text-slider-wrapper {
     order: 2;
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .text-for-slide {
+    font-size: 1.1em;
   }
 }
