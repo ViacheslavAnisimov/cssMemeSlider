@@ -6,22 +6,27 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   background: linear-gradient(to bottom, #74ABE2, #5563DE);
+  background-size: cover;
+  background-repeat: round;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .container {
-  flex-direction: column;
-  /* justify-content: center; */
-  width: 35.4em;
+  /* flex-direction: column; */
+  justify-content: center;
+  width: 35.3em;
   padding: 2em;
-  background: #000;
+  background: rgb(38, 38, 61);
   border: solid 0.1em #aaa;
-  border-radius: 3%;
+  border-radius: 1em;
+  box-shadow: 1em 1em 1em black;
 }
 
 .slider,
@@ -40,21 +45,17 @@ body {
   /* gap: 0.5em; */
 }
 
-img {
-  max-height: 500px;
-}
-
 .slide {
-  width: 100%;
-  max-height: 100%;
+  max-width: 100%;
+  max-height: auto;
   object-fit: contain;
+  /* border-radius: 3%; */
   /* border: solid 0.1em; */
 }
 
 .buttons-text-wrapper {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 }
 
 .text-slider-wrapper {
@@ -64,26 +65,20 @@ img {
 
 .slider,
 .text-slider {
-  /* width: 60em; */
   width: calc(100% * 4);
 }
 
 .text-for-slide {
-  /* padding: 0.2em 8em; */
   width: calc(100% * 4);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
-  border: solid 0.1em;
   text-wrap: nowrap;
   color: #fff;
 }
 
 .buttons-wrapper {
   justify-content: center;
-  /* align-items: center; */
-  /* gap: 0.5em; */
-  /* border: solid 0.1em blue; */
 }
 
 .manual-btn {
@@ -93,7 +88,6 @@ img {
   width: 2em;
   height: 2em;
   cursor: pointer;
-  /* border: solid 0.1em red; */
 }
 
 .span-manual-btn {
@@ -102,7 +96,6 @@ img {
   width: 50%;
   border: solid 0.1em black;
   border-radius: 50%;
-  /* background: #000; */
 }
 
 .span-manual-btn {
@@ -110,10 +103,10 @@ img {
   border: 0.133em solid rgb(189, 236, 226);
 }
 
-.manual-btn:active .span-manual-btn {
-  background-color: #55cf96;
-  border: 0.133em solid #000000;
-}
+/* .manual-btn:active .span-manual-btn {
+  background-color: red;
+  border: 0.133em solid red;
+} */
 
 .manual-btn:hover .span-manual-btn {
   background-color:green;
@@ -131,17 +124,17 @@ img {
 
 #radio-btn-2:checked ~ .container .slider-wrapper .slider,
 #radio-btn-2:checked ~ .container .buttons-text-wrapper .text-slider-wrapper .text-slider {
-  margin-left: -31.3em;
+  margin-left: -100%;
 }
 
 #radio-btn-3:checked ~ .container .slider-wrapper .slider,
 #radio-btn-3:checked ~ .container .buttons-text-wrapper .text-slider-wrapper .text-slider {
-  margin-left: -62.6em;
+  margin-left: -200%;
 }
 
 #radio-btn-4:checked ~ .container .slider-wrapper .slider,
 #radio-btn-4:checked ~ .container .buttons-text-wrapper .text-slider-wrapper .text-slider {
-  margin-left: -93.9em;
+  margin-left: -300%;
 }
 
 #radio-btn-1:checked ~ .container .buttons-text-wrapper .buttons-wrapper .manual-btn:nth-child(1) .span-manual-btn,
@@ -149,5 +142,30 @@ img {
 #radio-btn-3:checked ~ .container .buttons-text-wrapper .buttons-wrapper .manual-btn:nth-child(3) .span-manual-btn,
 #radio-btn-4:checked ~ .container .buttons-text-wrapper .buttons-wrapper .manual-btn:nth-child(4) .span-manual-btn {
   background: transparent;
-  /* border: solid 0.1em green; */
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .slider {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .buttons-text-wrapper {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .buttons-wrapper {
+    order: 1;
+  }
+
+  .text-slider-wrapper {
+    order: 2;
+    width: 100%;
+  }
 }
