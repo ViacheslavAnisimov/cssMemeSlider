@@ -19,7 +19,6 @@ body {
 }
 
 .container {
-  /* flex-direction: column; */
   justify-content: center;
   width: 35.3em;
   padding: 2em;
@@ -40,17 +39,10 @@ body {
   overflow: hidden;
 }
 
-.slider {
-  /* width: calc(100% * 7); */
-  /* gap: 0.5em; */
-}
-
 .slide {
   max-width: 100%;
   max-height: auto;
   object-fit: contain;
-  /* border-radius: 3%; */
-  /* border: solid 0.1em; */
 }
 
 .buttons-text-wrapper {
@@ -88,6 +80,7 @@ body {
   width: 2em;
   height: 2em;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .span-manual-btn {
@@ -103,10 +96,10 @@ body {
   border: 0.133em solid rgb(189, 236, 226);
 }
 
-/* .manual-btn:active .span-manual-btn {
-  background-color: red;
-  border: 0.133em solid red;
-} */
+.manual-btn:active {
+  background: #fff;
+  border: 0.133em solid #fff;
+}
 
 .manual-btn:hover .span-manual-btn {
   background-color:green;
