@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 1s;
 }
 
 body {
@@ -32,6 +31,7 @@ body {
 .buttons-wrapper,
 .text-slider {
   display: flex;
+  transition: 1s;
 }
 
 .slider-wrapper {
@@ -99,6 +99,7 @@ body {
 .manual-btn:active {
   background: #fff;
   border: 0.133em solid #fff;
+  transition: 0.3s;
 }
 
 .manual-btn:hover .span-manual-btn {
