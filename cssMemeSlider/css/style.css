@@ -103,8 +103,8 @@ body {
 }
 
 .manual-btn:hover .span-manual-btn {
-  background-color:green;
-  border: 0.133em solid green
+  background-color:#fff;
+  border: 0.133em solid #fff;
 }
 
 .input {
